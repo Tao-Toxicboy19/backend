@@ -37,7 +37,7 @@ const LoginController = (req, res) => __awaiter(void 0, void 0, void 0, function
             return res.status(401).json({ error: "รหัสผ่านไม่ถูกต้อง" });
         }
         // Create token
-        const token = jsonwebtoken_1.default.sign({ user_id: user._id, email }, process.env.TOKEN_KEY, {
+        const token = jsonwebtoken_1.default.sign({ user_id: user._id, email }, prayut, {
             expiresIn: "2h"
         });
         // Attach token to the user object (optional)
