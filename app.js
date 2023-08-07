@@ -8,9 +8,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const http_1 = __importDefault(require("http"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const Database_1 = require("./config/Database");
-const router_1 = __importDefault(require("./routers/router"));
-const middleware_1 = __importDefault(require("./middleware/middleware"));
+const Database_1 = require("./src/config/Database");
+const router_1 = __importDefault(require("./src/routers/router"));
+const middleware_1 = __importDefault(require("./src/middleware/middleware"));
 const app = (0, express_1.default)();
 // Connect to Mongo
 mongoose_1.default
