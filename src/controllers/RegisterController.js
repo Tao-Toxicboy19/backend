@@ -73,7 +73,7 @@ const RegisterController = (req, res) =>
       // Create token
       const token = jsonwebtoken_1.default.sign(
         { user_id: user._id, email },
-        prayut,
+        process.env.TOKEN_KEY,
         {
           expiresIn: "2h",
         }

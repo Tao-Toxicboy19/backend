@@ -13,7 +13,7 @@ const verifyToken = (req, res, next) => {
         return res.status(403).send("A token is required for authentication");
     }
     try {
-        const decoded = jsonwebtoken_1.default.verify(token, prayut);
+        const decoded = jsonwebtoken_1.default.verify(token, TOKEN_KEY);
         req.user = decoded;
     }
     catch (err) {
